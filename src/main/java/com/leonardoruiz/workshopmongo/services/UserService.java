@@ -1,0 +1,20 @@
+package com.leonardoruiz.workshopmongo.services;
+
+import com.leonardoruiz.workshopmongo.domain.User;
+import com.leonardoruiz.workshopmongo.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class UserService {
+
+    //Para instanciar automaticamente
+    @Autowired
+    private UserRepository repo;
+
+    public List<User> findAll() {
+        return repo.findAll();
+    }
+}
